@@ -96,7 +96,7 @@ body {
     position: relative;
     width: 100%;
     /* Asegura que mantenga la proporción de un video de anime (16:9) */
-    aspect-ratio: 9 / 16; 
+    aspect-ratio: 16 / 9; 
     border-radius: 12px; /* Si tus videos tienen bordes redondeados */
     overflow: hidden;
 }
