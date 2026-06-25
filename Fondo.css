@@ -90,3 +90,65 @@ body {
     line-height: 1.5;
     font-weight: 400; /* Peso normal */
 }
+
+/* Contenedor que encierra el iframe y la miniatura */
+.contenedor-reproductor {
+    position: relative;
+    width: 100%;
+    /* Asegura que mantenga la proporción de un video de anime (16:9) */
+    aspect-ratio: 16 / 9; 
+    border-radius: 12px; /* Si tus videos tienen bordes redondeados */
+    overflow: hidden;
+}
+
+/* Forzamos al iframe a ocupar todo el contenedor */
+.contenedor-reproductor .reproductor {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* La miniatura que se posiciona EXACTAMENTE encima */
+.miniatura-css {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10; /* Hace que se ponga por delante del iframe */
+    transition: opacity 0.3s ease;
+}
+
+/* Un botón de PLAY falso en el centro para incentivar el clic */
+.boton-play-visual {
+    width: 70px;
+    height: 70px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 50%;
+    position: relative;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+/* El triángulo blanco del botón Play */
+.boton-play-visual::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+    border-style: solid;
+    border-width: 15px 0 15px 25px;
+    border-color: transparent transparent transparent #ffffff;
+}
+
+/* Efecto hover: se agranda el botón al pasar el mouse (PC) */
+.miniatura-css:hover .boton-play-visual {
+    transform: scale(1.1);
+    background-color: #ff0055; /* Un color llamativo si quieres combinar con tu web */
+}
