@@ -35,9 +35,13 @@ body {
 
 /* TARJETA INDIVIDUAL - Estilo Premium, Limpio y Flotante */
 .tarjeta-video {
-    background-color: #ffffff; /* Blanco puro para resaltar */
-    padding: 16px; /* Más espacio interno */
-    border-radius: 22px; /* Super redondeado para look moderno */
+   width: 100%
+   max-width: 400px /* Evita que en PC se vuelva gigante */
+   display: flex;
+   margin-bottom: 20px;
+   background-color: #ffffff; /* Blanco puro para resaltar */
+   padding: 16px; /* Más espacio interno */
+   border-radius: 22px; /* Super redondeado para look moderno */
     
     /* SOMBRA DE CUBIERTA SUAVE: Difusa, sutil y con tono cálido rosado/dorado */
     box-shadow: 
@@ -93,36 +97,35 @@ body {
 
 /* Contenedor que encierra el iframe y la miniatura */
 .contenedor-reproductor {
-    position: relative;
-    width: 100%;
-    /* Asegura que mantenga la proporción de un video de anime (16:9) */
-    aspect-ratio: 16 / 9; 
-    border-radius: 12px; /* Si tus videos tienen bordes redondeados */
-    overflow: hidden;
+   position: relative;
+   width: 100%;
+   /* Asegura que mantenga la proporción de un video de anime (16:9) */
+   aspect-ratio: 16 / 9; 
+   border-radius: 12px; /* Si tus videos tienen bordes redondeados */
+   overflow: hidden;
+   background-color: #00; /* Fondo negro por si la imagen tarda en cargar */
 }
 
 /* Forzamos al iframe a ocupar todo el contenedor */
-.contenedor-reproductor .reproductor {
-    width: 100%;
-    height: 100%;
-    border: none;
+.contenedor-reproductor .reproductor, miniatura-css {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100% !important;
+   height: 100% !important; /* El !important rompe cualquier alto viejo que estire la imagen */
+   border: none;
 }
 
 /* La miniatura que se posiciona EXACTAMENTE encima */
 .miniatura-css {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 10; /* Hace que se ponga por delante del iframe */
-    transition: opacity 0.3s ease;
+   background-size: cover; /* Hace que la imagen cubra la caja sin deformarse */
+   background-position: center;
+   background-repeat: no repeat; 
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   z-index: 10; /* Hace que se ponga por delante del iframe */
+   transition: opacity 0.3s ease;
 }
 
 /* Un botón de PLAY falso en el centro para incentivar el clic */
