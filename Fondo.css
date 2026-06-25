@@ -1,0 +1,92 @@
+/* =========================================
+   ESTILO ESTÉTICO Y DE TENDENCIA - FONDO.CSS
+   ========================================= */
+
+/* Configuración del fondo general de la página con degradado */
+body {
+    /* Mantenemos tu degradado rosado, dorado y blanco con un tono más pastel */
+    background: linear-gradient(135deg, #fff7f9 0%, #f6e8d1 50%, #ffffff 100%);
+    margin: 0;
+    padding: 60px 20px; /* Más padding para aire */
+    font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fuentes de diseño moderno */
+    min-height: 100vh;
+    color: #2b2b2b;
+}
+
+/* Estilo para el título principal "Youtube" - Más minimalista y elegante */
+.youtube-title {
+    text-align: center;
+    color: #1a1a1a;
+    font-size: 2.8rem;
+    margin-bottom: 50px;
+    font-weight: 800; /* Super negrita para impacto */
+    letter-spacing: -1.5px; /* Interletrado estrecho para look moderno */
+}
+
+/* CUADRÍCULA DE VIDEOS - Formato de galería responsiva moderna */
+.galeria-videos {
+    display: grid;
+    /* Columnas automáticas, mínimo 300px, 4 columnas max en PC */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 35px; /* Más espacio entre videos */
+    max-width: 1300px; /* Un poco más ancho */
+    margin: 0 auto;
+}
+
+/* TARJETA INDIVIDUAL - Estilo Premium, Limpio y Flotante */
+.tarjeta-video {
+    background-color: #ffffff; /* Blanco puro para resaltar */
+    padding: 16px; /* Más espacio interno */
+    border-radius: 22px; /* Super redondeado para look moderno */
+    
+    /* SOMBRA DE CUBIERTA SUAVE: Difusa, sutil y con tono cálido rosado/dorado */
+    box-shadow: 
+        0px 10px 35px rgba(163, 134, 139, 0.12), /* Sombra cálida principal */
+        0px 4px 10px rgba(163, 134, 139, 0.05);  /* Sombra más cercana */
+    
+    /* Transiciones suaves para la interacción */
+    transition: transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1), box-shadow 0.3s ease;
+    overflow: hidden; /* Asegura que nada se salga de los bordes redondeados */
+}
+
+/* Interacción de elevación elegante al pasar el mouse */
+.tarjeta-video:hover {
+    transform: translateY(-8px); /* Eleva más suavemente */
+    box-shadow: 
+        0px 20px 45px rgba(163, 134, 139, 0.18), /* Sombra más profunda y cálida */
+        0px 8px 20px rgba(163, 134, 139, 0.10);  /* Sombra intermedia */
+}
+
+/* Efecto de escala suave en el video al pasar el mouse */
+.tarjeta-video:hover .reproductor {
+    transform: scale(1.03); /* Escala ligeramente el video */
+}
+
+/* Ajustes del reproductor multimedia - Bordes perfectamente redondeados */
+.reproductor {
+    width: 100%;
+    height: auto;
+    border-radius: 18px; /* Bordes redondeados integrados con la tarjeta */
+    display: block;
+    aspect-ratio: 16 / 9; /* Proporción estándar de video siempre */
+    transition: transform 0.3s ease; /* Transición para el hover */
+}
+
+/* Títulos de video - Tipografía Sans-Serif limpia */
+.titulo-video {
+    font-size: 1.2rem;
+    margin: 18px 0 8px 0;
+    color: #1a1a1a;
+    font-weight: 700; /* Negrita media */
+    line-height: 1.2;
+    letter-spacing: -0.5px;
+}
+
+/* Descripción - Gris suave y legible */
+.descripcion-video {
+    font-size: 0.95rem;
+    color: #6a6a6a;
+    margin: 0;
+    line-height: 1.5;
+    font-weight: 400; /* Peso normal */
+}
