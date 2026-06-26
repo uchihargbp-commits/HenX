@@ -121,7 +121,7 @@ body {
     background-size: cover; /* Hace que la imagen cubra la caja sin deformarse */
     background-position: top center;
     background-position: bottom center;
-    background-position: 10px -50px; /* Se mueve 10px a la derecha y 20px hacia arriba */
+    background-position: 10px -20px; /* Se mueve 10px a la derecha y 20px hacia arriba */
     background-position: 50% 30%;
     background-repeat: no-repeat; /* Corregido guion intermedio */ 
     display: flex;
