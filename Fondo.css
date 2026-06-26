@@ -119,7 +119,8 @@ body {
 /* La miniatura que se posiciona EXACTAMENTE encima */
 .miniatura-css {
     background-size: cover; /* Hace que la imagen cubra la caja sin deformarse */
-    background-position: center;
+    background-position: top center;
+    background-position: bottom center;
     background-repeat: no-repeat; /* Corregido guion intermedio */ 
     display: flex;
     justify-content: center;
