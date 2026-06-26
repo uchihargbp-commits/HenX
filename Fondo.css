@@ -122,7 +122,7 @@ body {
     background-position: top center;
     background-position: bottom center;
     background-position: 10px -20px; /* Se mueve 10px a la derecha y 20px hacia arriba */
-    background-position: 50% 65%;
+    background-position: 50% 100%;
     background-repeat: no-repeat; /* Corregido guion intermedio */ 
     display: flex;
     justify-content: center;
