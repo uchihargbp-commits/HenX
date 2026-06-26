@@ -99,7 +99,7 @@ body {
 .contenedor-reproductor {
     position: relative;
     width: 100%;
-    aspect-ratio: 16 / 9; /* Asegura que mantenga la proporción de un video (16:9) */ 
+    aspect-ratio: 9 / 16; /* Asegura que mantenga la proporción de un video (16:9) */ 
     border-radius: 18px; /* Combinado con el diseño de tus reproductores */
     overflow: hidden;
     background-color: #000000; /* Corregido hexadecimal para negro sólido */
